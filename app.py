@@ -1,8 +1,8 @@
-from re import template
+import re #import template,get_value
 from flask import Flask, render_template, request
 # from workzeug import secure_filename
 import os
-# import json
+import json
 # from request import request
 import pprint
 
@@ -37,9 +37,47 @@ def upload_func():
         client = veryfi.Client(client_id, client_secret, username, api_key)
 
         categories = ["college", "professor_name", "events"]
-        json_result = client.process_document((f.filename), categories)
+        # json_result = client.process_document((f.filename), categories)
 
-        pprint.pprint(json_result)
+        # pprint.pprint(json_result)
+        json1 = client.process_document((f.filename), categories)
+
+        
+        pprint.pprint(json1)
+
+        def get_value(key):
+            a = ["(",")","{","}","[","]"]
+            b = json1[key]
+            for x in a:
+                b = b.replace(x, " ")
+
+            b = b.replace("\n"," ")
+            b = b.replace("\t"," ")
+            b = b.replace("  "," ")
+            return b 
+
+
+        print(get_value("bill_to_address") )
+
+        print(get_value("invoice_number"))
+
+        print(get_value("bill_to_name"))
+
+        print(get_value("date"))
+
+        print(get_value("document_reference_number"))
+
+        ocr_text = get_value("ocr_text")
+        emailid = re.findall(r'[\w\.-]+@[\w\.-]+', ocr_text)
+        print(emailid)
+
+        print(json1["subtotal"])
+
+        print(get_value("ship_to_address"))
+
+        
+        # return b 
+
 
         return 'uploaded successfully'
     return 'here!!'
