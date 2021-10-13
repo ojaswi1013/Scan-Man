@@ -1,5 +1,7 @@
 import re #import template,get_value
 from flask import Flask, render_template, request
+from dotenv import load_dotenv
+load_dotenv()
 # from workzeug import secure_filename
 import os
 import json
@@ -10,11 +12,10 @@ import veryfi
 
 
 
-
-client_id = "vrfcnRUxjSbpO7I0ydFoNIgG5TZYXT29HThSs7G"
-client_secret = "sNAhigeiw5w28Eda7S5k3xNhdAnTn0poyhBZixsx5jAdrABi8XXANDXWv7FG9Yjruso9Yur4Ua9AC7ND4Ki0ABgb7oab2EAxYMtxCXT0PPx5vecwUPHxhASrC8T4smV6"
-username = "kejriwalharshita"
-api_key = "926fd300df925417d24f20c64871faf8"
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
+username = os.getenv("CLIENT_NAME")
+api_key = os.getenv("API_KEY")
 
 app = Flask(__name__)
 
