@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import Drop from './components/Drop';
 
