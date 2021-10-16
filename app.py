@@ -57,7 +57,7 @@ def upload_func():
         data = extract(json1)
         # insert into user database        
         # get user
-        email =  "jon@scanman.com"
+        # email =  "jon@scanman.com"
         # user = user_collection.find_one_or_404({"email":email})#json.loads(json.dumps(user_collection.find_one_or_404({"email":email})))
         # JSONEncoder().encode(user)
         items = json1["line_items"]
