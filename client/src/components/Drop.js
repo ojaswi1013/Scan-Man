@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import styled from 'styled-components';
 import axios from '../axios';
@@ -33,6 +34,8 @@ const Container = styled.div`
 `;
 
 const StyledDropzone = (props) => {
+  const history = useHistory();
+
   const {
     getRootProps,
     getInputProps,
@@ -64,6 +67,8 @@ const StyledDropzone = (props) => {
       .then(req => console.log(req))
       .catch(err => console.log("ERROR: "+err));
     console.log('heool world');
+
+    history.push('/home/drop-result')
   };
   
   return (
