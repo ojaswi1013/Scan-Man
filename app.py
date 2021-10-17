@@ -55,7 +55,8 @@ def upload_func():
         f.save(os.path.join(APP_ROOT, (f.filename)))
         json1 = parse(f)
         data = extract(json1)
-        print(data)
+        os.remove(f.filename)
+        # print(data)
         # insert into user database        
         # get user
         # email =  "jon@scanman.com"
