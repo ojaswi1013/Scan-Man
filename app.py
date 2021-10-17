@@ -55,6 +55,7 @@ def upload_func():
         f.save(os.path.join(APP_ROOT, (f.filename)))
         json1 = parse(f)
         data = extract(json1)
+        print(data)
         # insert into user database        
         # get user
         # email =  "jon@scanman.com"
@@ -69,6 +70,7 @@ def upload_func():
         invoice["sp_id"] = filename
         invoice_collection.insert({"invoice":invoice})
         # insert each item in items table with invoice id attached to it
+        data["line_items"] = items
         for item in items:
             item["in"] = filename
             item_collection.insert({"item":item})
