@@ -1,6 +1,7 @@
 # Hack2Hire
 
 Introduction
+
 This project is basically about converting documents/pdfs/handwritten files related to invoices, receipts etc.
 into some or the other sort of data(as per user's requirement) that is much more readable and contains only the 
 information that has been asked by the user(in this case the enterprise or the company).
