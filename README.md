@@ -32,25 +32,45 @@ Heroku - backend deployment
 # Backend Libraries
 
 certifi==2021.10.8
+
 charset-normalizer==2.0.6
+
 click==8.0.2
+
 colorama==0.4.4
+
 dnspython==1.16.0
+
 Flask==2.0.2
+
 Flask-Cors==3.0.10
+
 Flask-PyMongo==2.3.0
+
 Flask-UUID==0.2
+
 gunicorn==20.1.0
+
 idna==3.2
+
 itsdangerous==2.0.1
+
 Jinja2==3.0.2
+
 MarkupSafe==2.0.1
+
 pymongo==3.12.0
+
 python-dotenv==0.19.1
+
 requests==2.26.0
+
 six==1.16.0
+
 urllib3==1.26.7
+
 veryfi==2.1.0
+
 Werkzeug==2.0.2
 
 
