@@ -52,3 +52,16 @@ six==1.16.0
 urllib3==1.26.7
 veryfi==2.1.0
 Werkzeug==2.0.2
+
+
+# What's coming next?
+1) Data analysis
+2) Workflow optimization
+3) System hierarchy
+4) Fuctioning with multiple languages
+
+# DEMO FRONT-END
+![image](https://user-images.githubusercontent.com/63294042/137629977-f06238fc-610e-4e0a-ac5b-f6f2a192972a.png)
+![image](https://user-images.githubusercontent.com/63294042/137629993-a9db74b5-e946-4769-bf99-fc5c099a5260.png)
+![image](https://user-images.githubusercontent.com/63294042/137630000-e47d3ada-865c-4bc4-b2fd-ab2ea632cd22.png)
+
