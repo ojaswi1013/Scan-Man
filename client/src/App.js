@@ -5,17 +5,18 @@ import Home from './pages/Home';
 import SignIn from './pages/Signin';
 import Error from './pages/Error';
 import Drop from './components/Drop';
-import Result from './components/result';
+import Result from './components/Result';
 
 function App() {
   const [validated, setValidated] = useState(false);
+  const [fileSent, setFileSent] = useState(false);
 
   /*const setValidatedTrue = () => {
     setValidated(true);
   };*/
 
   return (
-    <div className="App">
+    <div className>
 
       <Switch>
         <Route path="/" exact>
@@ -28,12 +29,12 @@ function App() {
         </Route>
         <Route path="/home/drop-file" exact>
           {console.log(validated)}
-          {validated && <Drop />}
+          {validated && <Drop setFileSent={setFileSent} fileSent={fileSent}/>}
           {!validated && <h1>Kindly go back and SignIn first</h1>}
         </Route>
         <Route path="/home/drop-result" exact>
-          {console.log(validated)}
-          {validated && <Result />}
+          {console.log("inside the drop-result path")}
+          {validated && <Result fileSent={fileSent}/>}
           {!validated && <h1>Kindly go back and SignIn first</h1>}
         </Route>
         <Route path="*" exact>

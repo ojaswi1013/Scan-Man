@@ -1,6 +1,8 @@
 const HeaderAfter = props => {
-	return <div>
-		HeaderAfter
+	return<div>
+		Logo
+		<div>OO</div>
+		<button>LogOut</button>
 	</div>
 };
 

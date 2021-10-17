@@ -68,7 +68,8 @@ const StyledDropzone = (props) => {
       .catch(err => console.log("ERROR: "+err));
     console.log('heool world');
 
-    history.push('/home/drop-result')
+    props.setFileSent(!props.fileSent);
+    history.push('/home/drop-result');
   };
   
   return (

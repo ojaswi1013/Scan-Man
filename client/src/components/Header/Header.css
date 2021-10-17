@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid lightgrey;
+	height: 100px;
+}
+
+.btn {
+	transition: 0.4s;
+	height: 40px;
+	width: 240px;
+	position: relative;
+	top: 30%;
+	border-radius: 20px;
+	margin-right: 150px;
+	background-color: #ffffff;
+	color: #6c63ff;
+	border-color: #6c63ff;
+}
+.btn:hover {
+	cursor: pointer;
+	background-color: #6c63ff;
+	color: #ffffff;
+}
+
+.logo-style {
+	padding-left: 150px;
+	height: 100px;
+	width: 100px;
+	object-fit: contain;
+}

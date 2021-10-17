@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import '../pages/Signin.js';
 
 const SignInForm = props => {
 	const history = useHistory();
@@ -33,7 +34,9 @@ const SignInForm = props => {
 	};
 
 
-	return <div>
+	return <div className = 'form'>
+		<h1 className='welcome-txt'>Welcome Back</h1>
+		<h3 className = 'login-txt'>Please Login to continue</h3>
 		<form onSubmit = {formSubmitHandler}>
 			<label>Username:</label><br />
 			<input type = 'email' value ={enteredUserName} onChange ={userNameChangeHandler} />
@@ -41,8 +44,8 @@ const SignInForm = props => {
 			<label>Password:</label><br />
 			<input type = 'password' value ={enteredPassword} onChange ={passwordChangeHandler} />
 			<br />
-			{!correctCredentials && <p>Invalid UserName or Password!</p>}
-			<button type='submit'>LogIn</button>
+			{!correctCredentials && <p className='error'>Invalid UserName or Password!</p>}
+			<button className='login-btn' type='submit'>LogIn</button>
 		</form>
 	</div>
 };
