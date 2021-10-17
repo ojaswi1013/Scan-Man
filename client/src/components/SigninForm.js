@@ -5,8 +5,8 @@ import '../pages/Signin.js';
 const SignInForm = props => {
 	const history = useHistory();
 
-	const userName = "abc@scanman.com";
-	const password = "12345678";
+	const userName = "jon@scanman.com";
+	const password = "12345";
 	const [enteredUserName, setEnteredUserName] = useState("");
 	const [enteredPassword, setEneterdPassword] = useState("");
 	const [correctCredentials, setCorrectCredentials] = useState(true);

@@ -36,6 +36,8 @@ const Container = styled.div`
 const StyledDropzone = (props) => {
   const history = useHistory();
 
+  let temp = {};
+
   const {
     getRootProps,
     getInputProps,
@@ -57,19 +59,23 @@ const StyledDropzone = (props) => {
 
   const data = new FormData();
 
-  const onSubmitHandler = () =>{
+  const onSubmitHandler = async () =>{
+    try{
     data.append('file',acceptedFiles[0]);
     data.append('filename', acceptedFiles[0].path);
 
     const config = {headers:{'content-type':'multipart/form-data'}}
     console.log("data: ggzz "+data);
-    axios.post('/uploader',data,config)
-      .then(req => console.log(req))
-      .catch(err => console.log("ERROR: "+err));
-    console.log('heool world');
-
-    props.setFileSent(!props.fileSent);
+    var  res = await axios.post('/uploader',data,config);
+    console.log("This is res ");
+    temp=res.data;
+    await props.setresponse(temp);
+    await props.setFileSent(!props.fileSent);
     history.push('/home/drop-result');
+    }
+    catch(err){
+      console.log("ERR fatal: "+err);
+    }
   };
   
   return (
