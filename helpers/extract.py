@@ -10,8 +10,8 @@ def extract(json1):
             value = json1[k]
             if(value == None or value == ""):
                 del json1[k]
-            else:
-                print(key + ": " + f"{value}")
+            # else:
+                # print(key + ": " + f"{value}")
         elif (k == "line_items"):
             items = []
             for item in json1["line_items"]:
@@ -26,7 +26,6 @@ def extract(json1):
             del json1["line_items"]
             json1["line_items"] = items
         elif (k == "vendor"):
-            print("ye we r here")
             vendor = json1["vendor"]
             vendor_keys = []
             get_keys(vendor, vendor_keys)
