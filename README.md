@@ -73,12 +73,20 @@ veryfi==2.1.0
 
 Werkzeug==2.0.2
 
+# Relevant links
+API Link: https://scan-man-backend.herokuapp.com/
+
+Figma Link: https://www.figma.com/file/5FLmBxUPlikYyiOn2DtBsw/Hack2Hire?node-id=0%3A1
+
+Whimsical Link: https://whimsical.com/hack2hire-KsxY6WbbvmZuuMN7j6DDtk
+
 
 # What's coming next?
 1) Data analysis
 2) Workflow optimization
 3) System hierarchy
 4) Fuctioning with multiple languages
+5) Data Visualization
 
 # DEMO FRONT-END
 ![image](https://user-images.githubusercontent.com/63294042/137629977-f06238fc-610e-4e0a-ac5b-f6f2a192972a.png)
