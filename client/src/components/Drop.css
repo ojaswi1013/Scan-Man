@@ -1,0 +1,12 @@
+.contain-drop-area {
+	padding-top: 30%;
+}
+
+.contain-style{
+	position: relative;
+	background-image: url("../assets/Upload.png");
+	padding-top: 50px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	max-width: 100vw;
+}

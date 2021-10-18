@@ -1,6 +1,7 @@
 import { useState } from 'react';
 //import d from '../assets/jsn.json';
 import exportFromJSON from 'export-from-json';
+import './Result.css';
 
 const Result = props => {
 	const [dat,setDat] = useState([]);
@@ -29,7 +30,7 @@ const Result = props => {
 
 	const availableData = Object.keys(d).map((item) => 
 		<div>
-			<input type="checkbox" value = {item} onChange={checkHandler} />
+			<input className="hop-right" type="checkbox" value = {item} onChange={checkHandler} />
 			<label htmlFor = {item}>{item}</label><br />
 		</div>
 	);
@@ -80,12 +81,12 @@ const Result = props => {
     	exportFromJSON({ data, fileName, exportType })  
 	}
 
-	return <div>
+	return <div className = "main-container">
+			<div className="content-container">
 			{console.log("d:")}
 			{console.log(d)}
-			
-			Kindly check the fields that you would like to keep in the output.
-			<div>Kindly specify the type of output you require: 
+
+			<div className = "choice-txt">Kindly specify the type of output you require: 
 				<select value = {type} onChange = {setTypeHandler}>
 					<option value = "TXT">TXT</option>
 					<option value = "JSON">JSON</option>
@@ -94,14 +95,14 @@ const Result = props => {
 			</div>
 	
 			{type === "JSON" && <div>
-					<p>The fields that could be identified from the submitted document are:</p>
+					<p className="choice-txt ">The fields that could be identified from the submitted document are:</p>
 					{availableData}
 					</div>}
 			{type === "TXT" && <div>
 					<p>press submit to continue</p>
 					</div>}
 			{type === "EXCEL" && <div>
-					<div>Select the output type prefered: 
+					<div className = "choice-txt">Select the output type prefered: 
 					<select value = {type} onChange = {preferenceHandler}>
 					<option value = "ITEM">Only Items</option>
 					<option value = "EVERY">Every Field</option>
@@ -111,7 +112,7 @@ const Result = props => {
 					</div>}
 			{console.log("just br")}
 			{console.log(output)}
-			<button onClick={submitHandler}>Download</button>
+			<button className='choice-txt' onClick={submitHandler}>Download</button>
 			{jsonSubmit && <div>
 					Your Json File is ready for Download:
 					{console.log("output:")}
@@ -140,7 +141,7 @@ const Result = props => {
 			</div>}
 
 
-
+	</div>
 	</div>
 };
 

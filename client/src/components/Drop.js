@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import styled from 'styled-components';
 import axios from '../axios';
+import image from '../assets/Upload.png';
+import './Drop.css'
 
 const getColor = (props) => {
   if (props.isDragAccept) {
@@ -18,9 +20,10 @@ const getColor = (props) => {
 }
 
 const Container = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  top-margin: 500px;
+  left-margin:: 500px;
+  right-margin: 500px;
   align-items: center;
   padding: 20px;
   border-width: 2px;
@@ -79,17 +82,21 @@ const StyledDropzone = (props) => {
   };
   
   return (
+    <div className="contain-style">
+    <div className="contain-drop-area">
     <div className="container">
       <Container {...getRootProps({isDragActive, isDragAccept, isDragReject})}>
         <input {...getInputProps()} />
         <p>Drag 'n' drop some files here, or click to select files</p>
-        <button type='button' onClick={open}>Open File Dialog</button>
+        <button type='button' onClick={open}>Browse</button>
       </Container>
       <aside>
         <h4>Files</h4>
         <ul>{files}</ul>
       </aside>
       <button onClick = {onSubmitHandler}>Submit</button>
+    </div>
+    </div>
     </div>
   );
 };

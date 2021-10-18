@@ -1,8 +1,10 @@
+import logo from '../../assets/logo1.svg'
+import './HeaderAfter.css';
+
 const HeaderAfter = props => {
-	return<div>
-		Logo
-		<div>OO</div>
-		<button>LogOut</button>
+	return<div className='contain'>
+		<img src={logo} alt='Scan-Man' className='logo-style'/>
+		<button className='btn'>Sign Out</button>
 	</div>
 };
 
